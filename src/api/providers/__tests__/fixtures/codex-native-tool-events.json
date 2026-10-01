@@ -1,0 +1,110 @@
+[
+	{
+		"type": "response.output_item.added",
+		"item": {
+			"id": "fc_1",
+			"type": "function_call",
+			"status": "in_progress",
+			"arguments": "",
+			"call_id": "call_1",
+			"name": "read_file"
+		},
+		"output_index": 0
+	},
+	{
+		"type": "response.function_call_arguments.delta",
+		"delta": "{\"path\":\"fixture.txt\"}",
+		"item_id": "fc_1",
+		"output_index": 0
+	},
+	{
+		"type": "response.function_call_arguments.done",
+		"arguments": "{\"path\":\"fixture.txt\"}",
+		"item_id": "fc_1",
+		"output_index": 0
+	},
+	{
+		"type": "response.output_item.done",
+		"item": {
+			"id": "fc_1",
+			"type": "function_call",
+			"status": "completed",
+			"arguments": "{\"path\":\"fixture.txt\"}",
+			"call_id": "call_1",
+			"name": "read_file"
+		},
+		"output_index": 0
+	},
+	{
+		"type": "response.output_item.added",
+		"item": {
+			"id": "fc_2",
+			"type": "function_call",
+			"status": "in_progress",
+			"arguments": "",
+			"call_id": "call_2",
+			"name": "list_files"
+		},
+		"output_index": 1
+	},
+	{
+		"type": "response.function_call_arguments.delta",
+		"delta": "{\"path\":\".\"}",
+		"item_id": "fc_2",
+		"output_index": 1
+	},
+	{
+		"type": "response.function_call_arguments.done",
+		"arguments": "{\"path\":\".\"}",
+		"item_id": "fc_2",
+		"output_index": 1
+	},
+	{
+		"type": "response.output_item.done",
+		"item": {
+			"id": "fc_2",
+			"type": "function_call",
+			"status": "completed",
+			"arguments": "{\"path\":\".\"}",
+			"call_id": "call_2",
+			"name": "list_files"
+		},
+		"output_index": 1
+	},
+	{
+		"type": "response.output_item.added",
+		"item": {
+			"id": "fc_3",
+			"type": "function_call",
+			"status": "in_progress",
+			"arguments": "",
+			"call_id": "call_3",
+			"name": "codebase_search"
+		},
+		"output_index": 2
+	},
+	{
+		"type": "response.function_call_arguments.delta",
+		"delta": "{\"query\":\"fixture marker\",\"path\":\".\"}",
+		"item_id": "fc_3",
+		"output_index": 2
+	},
+	{
+		"type": "response.function_call_arguments.done",
+		"arguments": "{\"query\":\"fixture marker\",\"path\":\".\"}",
+		"item_id": "fc_3",
+		"output_index": 2
+	},
+	{
+		"type": "response.output_item.done",
+		"item": {
+			"id": "fc_3",
+			"type": "function_call",
+			"status": "completed",
+			"arguments": "{\"query\":\"fixture marker\",\"path\":\".\"}",
+			"call_id": "call_3",
+			"name": "codebase_search"
+		},
+		"output_index": 2
+	}
+]

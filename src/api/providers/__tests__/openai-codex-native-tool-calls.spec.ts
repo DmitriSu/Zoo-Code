@@ -226,7 +226,7 @@ describe("OpenAiCodexHandler native tool calls", () => {
 		expect(textChunks.map((c) => c.text).join("")).toContain("done-event text only")
 	})
 
-	it("yields tool_call when Codex emits function_call only in response.output_item.done", async () => {
+	it("yields tool_call_partial when Codex emits function_call only in response.output_item.done", async () => {
 		vi.spyOn(openAiCodexOAuthManager, "getAccessToken").mockResolvedValue("test-token")
 		vi.spyOn(openAiCodexOAuthManager, "getAccountId").mockResolvedValue("acct_test")
 		;(handler as any).client = {
@@ -264,10 +264,10 @@ describe("OpenAiCodexHandler native tool calls", () => {
 
 		const chunks = await collectStream(stream)
 
-		const toolCalls = chunks.filter((c) => c.type === "tool_call")
-		expect(toolCalls.length).toBeGreaterThan(0)
+		const toolCalls = chunks.filter((c) => c.type === "tool_call_partial")
+		expect(toolCalls).toHaveLength(1)
 		expect(toolCalls[0]).toMatchObject({
-			type: "tool_call",
+			type: "tool_call_partial",
 			id: "call_done_only",
 			name: "attempt_completion",
 		})
